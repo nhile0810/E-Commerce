@@ -1,0 +1,145 @@
+/* Form Styling with Warm Winter Theme */
+.subscribe-section {
+    background-color: #f3f7fc; /* Light, wintery background */
+    padding: 20px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.section-header h2 {
+    color: #5b7a95;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.register-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.register-image img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.register-form {
+    max-width: 40%;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.form-header h3 {
+    color: #d9534f;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.form-header p {
+    color: #737373;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.register-form-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #bdd4e7;
+    border-radius: 5px;
+    background-color: #f9fafb;
+    color: #333;
+    font-size: 1rem;
+}
+
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #4cbbe0; /* Warm, wintery accent color */
+    outline: none;
+    background-color: #f3f7fc;
+}
+
+.submit-btn {
+    background-color: #e97b4a;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #d9534f; /* Darker accent on hover */
+    transform: translateY(-2px);
+}
+
+.urgent-cta {
+    background-color: #f4a3a3;
+    color: #5b3e3e;
+}
+
+.privacy-note {
+    font-size: 0.9rem;
+    color: #737373;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.limited-offer {
+    background-color: #5b7a95;
+    color: #fff;
+    padding: 8px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-top: 15px;
+    position: absolute;
+    bottom: -25px;
+    width: 100%;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .register-container {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .register-image img {
+        max-width: 100%;
+    }
+
+    .urgent-cta {
+        width: 100%;
+    }
+}

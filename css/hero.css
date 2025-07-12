@@ -1,0 +1,134 @@
+:root {
+    --primary: #2b4c7e;
+    --accent: #c45858;
+    --warm: #f8b195;
+    --light: #f5f7fa;
+    --dark: #2c3e50;
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.6;
+  }
+  
+
+
+
+.hero {
+    position: relative;
+    height: 100vh;
+    /* background: linear-gradient(45deg, rgba(43,76,126,0.05), rgba(196,88,88,0.05)); */
+    /* background-image: url('../img/logo/backgound-winter.gif'); */
+    overflow: hidden;
+  }
+  
+  .product-showcase {
+    position: relative;
+    height: 70vh;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 1rem;
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .product-item {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .product-item:hover {
+    transform: translateY(-10px);
+  }
+  
+  .product-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Grid positioning */
+  .scarf {
+    grid-column: 2 / 6;
+    grid-row: 1 / 4;
+  }
+  
+  .hat {
+    grid-column: 6 / 9;
+    grid-row: 2 / 5;
+  }
+  
+  .bracelet {
+    grid-column: 9 / 12;
+    grid-row: 1 / 3;
+  }
+  
+  .bag {
+    grid-column: 2 / 5;
+    grid-row: 4 / 7;
+  }
+  
+  .lamp {
+    grid-column: 8 / 12;
+    grid-row: 3 / 7;
+  }
+  
+  .content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 3rem;
+    background: linear-gradient(transparent, rgba(71, 134, 236, 0.692));
+    text-align: center;
+  }
+  
+  .description {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    font-size: 1.2rem;
+    color: var(--dark);
+    line-height: 1.8;
+  }
+  
+  .cta-button-hero {
+    display: inline-block;
+    padding: 1rem 3rem;
+    background: var(--accent);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(196,88,88,0.3);
+  }
+  
+  .cta-button-hero:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(196,88,88,0.4);
+  }
+  
+  .discount {
+    margin-top: 1rem;
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }

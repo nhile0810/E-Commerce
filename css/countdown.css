@@ -1,0 +1,105 @@
+/* Countdown Timer Styling */
+.countdown-timer {
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #e0f7fa;
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    margin: 0 auto;
+    height: auto; /* Điều chỉnh chiều cao */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling for main text */
+.countdown-text {
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: #004d40;
+    margin-right: 20px; 
+    display: inline-block; 
+}
+
+/* Time section styling */
+.countdown-time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Styling for each time section */
+.time-section {
+    background-color: #90caf9;
+    color: #fff;
+    border-radius: 8px;
+    padding: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    width: 75px; /* Đặt chiều rộng cố định cho mỗi phần để cân đối */
+}
+
+/* Number styling */
+.time-number {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-right: 5px; /* Khoảng cách nhỏ giữa số và nhãn */
+}
+
+/* Label styling */
+.time-label {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-left: 3px; /* Khoảng cách nhỏ giữa số và text */
+}
+
+/* Snowflake animation */
+@keyframes snowfall {
+    0% {
+        transform: translateY(-10px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+.snowflake {
+    position: absolute;
+    top: -10px;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    width: 10px;
+    height: 10px;
+    animation: snowfall 10s linear infinite;
+    z-index: 1;
+}
+
+/* Position and animation timing for snowflakes */
+.snowflake:nth-child(1) { left: 10%; animation-duration: 8s; animation-delay: 0s; }
+.snowflake:nth-child(2) { left: 20%; animation-duration: 6s; animation-delay: 1s; }
+.snowflake:nth-child(3) { left: 30%; animation-duration: 7s; animation-delay: 2s; }
+.snowflake:nth-child(4) { left: 40%; animation-duration: 9s; animation-delay: 3s; }
+.snowflake:nth-child(5) { left: 50%; animation-duration: 5s; animation-delay: 0.5s; }
+.snowflake:nth-child(6) { left: 60%; animation-duration: 8s; animation-delay: 1s; }
+.snowflake:nth-child(7) { left: 70%; animation-duration: 6s; animation-delay: 2s; }
+.snowflake:nth-child(8) { left: 80%; animation-duration: 9s; animation-delay: 3s; }
+.snowflake:nth-child(9) { left: 90%; animation-duration: 7s; animation-delay: 0.2s; }
+.snowflake:nth-child(10) { left: 95%; animation-duration: 6s; animation-delay: 0.7s; }
+
+/* Snowflake size variations */
+.snowflake:nth-child(2) { width: 7px; height: 7px; }
+.snowflake:nth-child(4) { width: 9px; height: 9px; }
+.snowflake:nth-child(6) { width: 6px; height: 6px; }
+.snowflake:nth-child(8) { width: 8px; height: 8px; }
+.snowflake:nth-child(10) { width: 10px; height: 10px; }

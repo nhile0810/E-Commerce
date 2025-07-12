@@ -1,0 +1,52 @@
+.footer-section {
+    background-color: #343a40; /* Màu nền tối */
+    color: #fff; /* Màu chữ trắng */
+}
+
+.footer-section .text-uppercase {
+    letter-spacing: 0.05em; /* Khoảng cách chữ */
+}
+
+.footer-section a {
+    color: #ccc;
+    transition: color 0.3s;
+}
+
+.footer-section a:hover {
+    color: #fff; /* Màu chữ khi hover */
+}
+
+.footer-section .form-control {
+    background-color: #495057;
+    border: none;
+    color: #fff;
+}
+
+.footer-section .btn-primary {
+    background-color: #4e81d4;
+    border: none;
+}
+
+.footer-section .btn-primary:hover {
+    background-color: #3a6a9c;
+}
+
+.footer-section .fab {
+    font-size: 1.5rem; /* Kích thước icon mạng xã hội */
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer-section h4 {
+        font-size: 1.1rem; /* Slightly smaller headings for smaller screens */
+    }
+    
+    .footer-section ul li {
+        flex-direction: column; /* Stack icon and text on smaller screens */
+        align-items: flex-start; /* Align left */
+    }
+
+    .footer-section ul li i {
+        margin-bottom: 5px; /* Add space between icon and text */
+        margin-right: 0; /* Remove right margin */
+    }
+}

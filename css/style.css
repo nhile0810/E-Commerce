@@ -1,0 +1,407 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #cfe5f9; /* Màu xanh nhạt như tuyết */
+}
+#shop, #feedback, #register, #contact {
+    scroll-margin-top: 80px; /* Điều chỉnh giá trị này tùy theo chiều cao của navbar */
+}
+
+/* Reset và cài đặt chung */
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 1000;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 0;
+    height: 80px; /* Chiều cao cố định cho navbar */
+    display: flex;
+    align-items: center;
+}
+
+/* Container styling để đảm bảo nội dung không bị tràn */
+.navbar .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* Logo Styling */
+.navbar .navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 700;
+    color: #2a69bc;
+    font-size: 1.6rem;
+    padding: 0;
+    text-decoration: none;
+    height: 100%; /* Chiều cao 100% của container */
+}
+
+.navbar .navbar-brand .logo {
+    max-height: 120px; /* Chiều cao tối đa của logo */
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+/* Navigation Menu */
+.navbar-nav {
+    margin: 0 2rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
+    margin: 0 0.5rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-link {
+    color: #333;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    position: relative;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #2a69bc;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    height: 100%;
+}
+
+.social-link {
+    color: #2a69bc;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: rgba(42, 105, 188, 0.1);
+    text-decoration: none;
+}
+
+.social-link:hover {
+    transform: translateY(-3px);
+    background: #2a69bc;
+    color: white;
+}
+
+/* Mobile Responsive */
+@media (max-width: 991.98px) {
+    .navbar {
+        height: 70px; /* Chiều cao nhỏ hơn cho mobile */
+    }
+
+    .navbar-brand {
+        margin-right: 0;
+    }
+
+    .navbar .navbar-brand .logo {
+        max-height: 140px; /* Chiều cao tối đa nhỏ hơn cho mobile */
+    }
+
+    .navbar-toggler {
+        border: none;
+        padding: 0.5rem;
+    }
+
+    .navbar-toggler:focus {
+        box-shadow: none;
+        outline: none;
+    }
+
+    .navbar-collapse {
+        background: white;
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        margin: 0.5rem 1rem;
+    }
+
+    .navbar-nav {
+        margin: 0;
+        padding: 1rem 0;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .nav-item {
+        margin: 0.5rem 0;
+        height: auto;
+    }
+
+    .nav-link {
+        text-align: center;
+        padding: 0.75rem;
+        font-size: 1rem;
+        height: auto;
+    }
+
+    .social-icons {
+        justify-content: center;
+        padding-top: 1rem;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        height: auto;
+    }
+}
+
+/* OUR COLLECTION */
+.collection-section {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+}
+
+.text-section {
+    display: flex;
+    flex-direction: column; /* Changed to column to stack elements vertically */
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 20px; /* Adds space between title and button */
+}
+
+.highlight-text {
+    font-size: 36px;
+    font-weight: bold;
+    color: #35c5de;
+    display: block;
+    text-transform: uppercase;
+    padding: 10px;
+    animation: fadeInText 1.5s ease-in-out;
+    text-align: center; /* Ensures text is centered */
+}
+
+.custom-shape {
+    width: 100%;
+    padding-top: 120%; /* Maintain a 1:1 aspect ratio */
+    position: relative;
+    border-top-left-radius: 50% 25%;
+    border-top-right-radius: 50% 25%;
+    overflow: hidden;
+    margin-bottom: 20px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.custom-shape img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cta-button-collect {
+    background-color: #35c5de;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 10px; /* Added space above button */
+}
+
+.cta-button-collect:hover {
+    background-color: #d9534f;
+    transform: scale(1.05);
+}
+
+/* Hiệu ứng hover cho cả hình dạng và hình ảnh */
+.custom-shape:hover {
+    transform: scale(1.05) translateY(-10px); /* Zoom và di chuyển lên trên */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+}
+
+/* Hiệu ứng hover cho hàng 2 (flipped) */
+.flipped-shape:hover {
+    transform: scale(-1.05) translateY(-10px); /* Zoom và di chuyển xuống dưới */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+}
+
+.flipped-shape img {
+    transform: scaleY(-1); /* Flip the image back to its original orientation */
+}
+
+/* Animation Keyframes */
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hiệu ứng Slide */
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInUp {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Ứng dụng Animations cho Rows */
+.animate-slide-left {
+    animation: slideInLeft 1.2s ease-out;
+}
+
+.animate-slide-right {
+    animation: slideInRight 1.2s ease-out;
+}
+
+.animate-slide-up {
+    animation: slideInUp 1.2s ease-out;
+}
+
+/* Thiết lập cho shape ngược ở hàng 2 */
+.flipped-shape {
+    transform: scaleY(-1); /* Flip the shape ngược */
+}
+
+@media (max-width: 768px) {
+    .text-section {
+        margin-bottom: 20px;
+    }
+}
+
+/* Following */
+.follow-section {
+    background-color: #f0f8ff; /* Màu nền lạnh, nhẹ nhàng */
+    padding: 50px 0; /* Thêm khoảng cách trên và dưới cho section */
+}
+
+.image-block-css {
+    width: 100%; /* Chiếm 100% chiều rộng */
+    height: 200px; /* Chiều cao cho mỗi hình ảnh */
+    border-radius: 8px; /* Bo góc cho hình ảnh */
+    overflow: hidden; /* Ẩn phần thừa ra ngoài của hình ảnh */
+}
+
+.image-background {
+    background-size: cover; /* Tự động điều chỉnh kích thước hình ảnh */
+    background-position: center; /* Căn giữa hình ảnh */
+    height: 100%; /* Chiều cao 100% cho hình nền */
+}
+
+.com-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 20px;
+    background-color: #007BFF; /* Màu xanh lạnh */
+    color: #fff; /* Màu chữ trắng */
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.com-button:hover {
+    background-color: #0056b3; /* Màu tối hơn khi hover */
+    transform: translateY(-2px); /* Hiệu ứng nâng nút lên */
+}
+
+.button-text i {
+    margin-right: 5px; /* Khoảng cách giữa biểu tượng và chữ */
+}
+
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .com-button {
+        font-size: 0.9rem; /* Giảm kích thước chữ trên thiết bị nhỏ */
+        padding: 10px 15px; /* Điều chỉnh padding cho thiết bị nhỏ */
+    }
+    
+    .image-background {
+        height: 150px; /* Giảm chiều cao hình ảnh trên thiết bị nhỏ */
+    }
+}
+
+@media (max-width: 576px) {
+    h2 {
+        font-size: 1.5rem; /* Giảm kích thước tiêu đề trên thiết bị nhỏ hơn */
+    }
+
+    .com-button {
+        font-size: 0.8rem; /* Giảm kích thước chữ thêm trên thiết bị rất nhỏ */
+        padding: 8px 10px; /* Điều chỉnh padding thêm cho thiết bị rất nhỏ */
+    }
+}
+
+
+
+
+/* FOOTER */
+.footer {
+    background-color: #e0dcd3;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer p,
+.footer .social-icons a {
+    color: #333;
+}
